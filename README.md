@@ -1,0 +1,16 @@
+# Sistema de Medicamentos para Idosos e Pessoas com Doenças Crôinicas
+
+Sistema de auxílio para monitoramento de administração de medicamentos
+
+## Configuração das variáveis de ambiente
+
+Crie um arquivo na pasta raiz do projeto chamado `.env`. Em seguida, copie as variáveis a seguir:
+
+```
+LOCALHOST=endereco-ou-nome-do-servidor
+USER=seu-usuário
+PASSWORD=senha-do-usuário
+DATABASE=nome-do-banco-de-dados
+```
+
+> OBSERVAÇÃO: os valores para LOCALHOST, USER, PASSWORD E DATABASE devem ser substituídos pela configuração do banco de dados que usa o SGBD MySQL
