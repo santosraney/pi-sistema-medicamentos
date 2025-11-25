@@ -1,0 +1,7 @@
+node_modules/
+.vscode/
+
+*.json
+mediccare.session.sql
+
+.env
