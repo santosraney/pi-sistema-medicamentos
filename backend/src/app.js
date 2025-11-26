@@ -29,8 +29,13 @@ db.sync({ alter: true })
     .then(() => console.log("Tabelas sincronizadas"))
     .catch(err => console.log(err))
 
-// Confguração dos middlewares
 
-// Importação das rotas
 
-// Execução do servidor
+
+const authRoutes = require('./routes/authRoutes')
+app.use('./auth', authRoutes)
+
+
+
+const idosoRoutes = require('./routes/idosoRoutes');
+app.use('/idosos', idosoRoutes);

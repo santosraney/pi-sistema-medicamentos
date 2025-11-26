@@ -1,7 +1,12 @@
+# Ignorando a pasta node_modules
 node_modules/
+
+# Ignorando a pasta .vscode
 .vscode/
 
+# Ignorando todos os arquivos .json
 *.json
-mediccare.session.sql
 
+# Ignorando um arquivo
+mediccare.session.sql
 .env
