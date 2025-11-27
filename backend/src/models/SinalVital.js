@@ -1,5 +1,5 @@
-const { DataTypes } = require("sequelize");
-const db = require("../config/database");
+const { DataTypes } = require("sequelize")
+const db = require("../config/database")
 
 const SinalVital = db.define("SinalVital", {
     tipo: {
@@ -15,6 +15,6 @@ const SinalVital = db.define("SinalVital", {
         allowNull: false
     },
     observacoes: DataTypes.TEXT
-});
+})
 
-module.exports = SinalVital;
+module.exports = SinalVital

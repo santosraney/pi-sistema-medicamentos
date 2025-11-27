@@ -1,5 +1,5 @@
-const { DataTypes } = require("sequelize");
-const db = require("../config/database");
+const { DataTypes } = require("sequelize")
+const db = require("../config/database")
 
 const EventoAdverso = db.define("EventoAdverso", {
     tipo: {
@@ -12,6 +12,6 @@ const EventoAdverso = db.define("EventoAdverso", {
     },
     descricao: DataTypes.TEXT,
     local: DataTypes.STRING
-});
+})
 
-module.exports = EventoAdverso;
+module.exports = EventoAdverso

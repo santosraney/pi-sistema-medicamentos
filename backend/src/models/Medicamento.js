@@ -1,5 +1,5 @@
-const { DataTypes } = require("sequelize");
-const db = require("../config/database");
+const { DataTypes } = require("sequelize")
+const db = require("../config/database")
 
 const Medicamento = db.define("Medicamento", {
     nome: {
@@ -12,6 +12,6 @@ const Medicamento = db.define("Medicamento", {
     horariosPrescritos: DataTypes.STRING,
     instrucoesEspeciais: DataTypes.STRING,
     classificacao: DataTypes.STRING
-});
+})
 
-module.exports = Medicamento;
+module.exports = Medicamento

@@ -1,5 +1,5 @@
-const { DataTypes } = require("sequelize");
-const db = require("../config/database");
+const { DataTypes } = require("sequelize")
+const db = require("../config/database")
 
 const Cuidador = db.define("Cuidador", {
     nome: {
@@ -12,6 +12,6 @@ const Cuidador = db.define("Cuidador", {
         type: DataTypes.INTEGER,
         defaultValue: 0
     }
-});
+})
 
-module.exports = Cuidador;
+module.exports = Cuidador

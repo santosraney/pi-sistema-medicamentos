@@ -1,5 +1,5 @@
-const { DataTypes } = require("sequelize");
-const db = require("../config/database");
+const { DataTypes } = require("sequelize")
+const db = require("../config/database")
 
 const Estoque = db.define("Estoque", {
     quantidadeInicial: {
@@ -10,6 +10,6 @@ const Estoque = db.define("Estoque", {
         type: DataTypes.INTEGER,
         allowNull: false
     }
-});
+})
 
-module.exports = Estoque;
+module.exports = Estoque

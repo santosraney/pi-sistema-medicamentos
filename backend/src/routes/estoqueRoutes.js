@@ -1,30 +1,22 @@
 const express = require('express')
 const router = express.Router()
 
-// Importa o controller
-const controller = require('../controllers/idosoController')
-
-// Importa o middleware de autenticação JWT
+const controller = require('../controllers/estoqueController')
 const auth = require('../middleware/auth')
 
-/*
-    Todas as rotas de Idoso serão protegidas por JWT,
-    então só acessa se usar "Authorization: Bearer <token>"
-*/
-
-// Criar idoso
+// Criar estoque
 router.post('/', auth, controller.create)
 
-// Listar todos
+// Listar estoques
 router.get('/', auth, controller.list)
 
-// Buscar um idoso pelo ID
+// Buscar por ID
 router.get('/:id', auth, controller.get)
 
-// Atualizar idoso
+// Atualizar estoque
 router.put('/:id', auth, controller.update)
 
-// Remover idoso
+// Remover estoque
 router.delete('/:id', auth, controller.remove)
 
 module.exports = router

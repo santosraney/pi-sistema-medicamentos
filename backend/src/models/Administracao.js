@@ -1,5 +1,5 @@
-const { DataTypes } = require("sequelize");
-const db = require("../config/database");
+const { DataTypes } = require("sequelize")
+const db = require("../config/database")
 
 const Administracao = db.define("Administracao", {
     horarioAdministrado: {
@@ -8,6 +8,6 @@ const Administracao = db.define("Administracao", {
     },
     observacoes: DataTypes.TEXT,
     tipo: DataTypes.STRING  // correto, fora do horário, antibiótico atrasado etc.
-});
+})
 
 module.exports = Administracao;
