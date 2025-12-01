@@ -1,3 +1,4 @@
+// console.log("CARREGANDO APP.JS DE:", __dirname)
 // Importação dos pacotes
 
 // Instância para o Express
@@ -5,31 +6,32 @@
 
 const express = require('express')
 const cors = require('cors')
+const db = require('./config/database')
 
+// Criar instância do Express
 const app = express()
 
+// Middlewares globais
 app.use(cors())
 app.use(express.json())
 
-const db = require('./config/database')
-
-db.authenticate()
-    .then(() => console.log("Conectado ao banco!"))
-    .catch(err => console.log("Erro ao conectar:", err))
-
+// Teste rápido da API
 app.get('/status', (req, res) => {
     res.json({ message: "API funcionando!" })
 })
 
-module.exports = app
+// Conexão com o banco
+db.authenticate()
+    .then(() => console.log("Conectado ao banco!"))
+    .catch(err => console.log("Erro ao conectar:", err))
 
-// Gerar tabelas no MySQL
-const models = require('./models/index')
+// Importar modelos
+require('./models/index')
+
+// Sincronizar tabelas
 db.sync({ alter: true })
     .then(() => console.log("Tabelas sincronizadas"))
-    .catch(err => console.log(err))
-
-
+    .catch(err => console.log(err));
 
 // Registrando rotas de doença no app.js
 const doencaRoutes = require('./routes/doencaRoutes')
@@ -61,3 +63,6 @@ app.use('/administracoes', administracaoRoutes)
 
 const medicamentoRoutes = require('./routes/medicamentoRoutes')
 app.use('/medicamentos', medicamentoRoutes) 
+
+// Exportar app 
+module.exports = app
